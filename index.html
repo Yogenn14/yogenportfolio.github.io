@@ -22,7 +22,7 @@
                     <li><a onclick="hide_menu()" href="#home">Home</a></li>
                     <li><a onclick="hide_menu()" href="#about">Projects</a></li>
                     <li><a onclick="hide_menu()" href="#resume">Resume</a></li>
-                    <li><a onclick="hide_menu()" href="#portfolio" id="myLink">Gallery</a></li>
+                    <li><a onclick="hide_menu()" href="#portfolio">Gallery</a></li>
                     <li><a onclick="hide_menu()" href="#contact">Contact</a></li>
 
 
@@ -527,23 +527,20 @@
                 }
             }
         </script>
+          <script>
+        // Function to scroll to the section with the ID "home"
+        function scrollToHome() {
+            const homeSection = document.getElementById("home");
+            if (homeSection) {
+                homeSection.scrollIntoView({ behavior: "smooth" });
+            }
+        }
 
-             <script>
-    // Function to scroll to the top of the page
-    function scrollToTop() {
-      window.scrollTo(0, 0);
-    }
+        // Call the function when the page is loaded
+        window.onload = scrollToHome;
+    </script>
 
-    // Get the link element
-    var myLink = document.getElementById("myLink");
-
-    // Add an event listener to the link to scroll to top on load
-    myLink.addEventListener("click", function(event) {
-      event.preventDefault(); // Prevent the default link behavior
-      scrollToTop();
-      window.location.href = this.href; // Redirect to the link URL after scrolling
-    });
-  </script>
+       
 
     </body>
     <!-- =================Body End==================== -->
